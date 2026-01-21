@@ -1,8 +1,8 @@
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useMemo, useState } from "react";
 
 // Componente de Login 
 export const Login = () => {
-    
+    // usando use state
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
 
@@ -11,6 +11,7 @@ export const Login = () => {
         console.log(password);
     };
 
+    // usando use effect
     useEffect(() => {
         if(window.confirm("Voce é homem?")){
             console.log("Usuario é homem");
@@ -26,10 +27,18 @@ export const Login = () => {
     useEffect(() => {
         console.log(password);
     }, [password]);
+
+    const emailLength = useMemo(() => {
+        console.log("Calculando tamanho do email...");
+        return email.length * 1000;
+    }, [email.length]);
     
     return(
         <div>
             <form >
+
+                <p>Quantidade de caracteres no email: {emailLength}</p>
+
                 <label>
                     <span>Email</span>
                     <input value={email} onChange={evento => setEmail(evento.target.value)} />

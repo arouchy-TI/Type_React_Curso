@@ -5,7 +5,7 @@ import { App } from './app/App.tsx'
 
 // .render - componentes do react
 createRoot(document.getElementById('root')!).render(
-  
+  <StrictMode>
     <App />
-  ,
+  </StrictMode>,
 )
