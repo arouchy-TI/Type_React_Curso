@@ -13,11 +13,6 @@ export const Login = () => {
     const handleEntrar = () => {
         console.log(email);
         console.log(password);
-
-        if(inputPasswordRef.current !== null){
-            inputPasswordRef.current.focus();
-        }
-
     };
 
     // usando use effect
