@@ -1,15 +1,18 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 // Componente de Login 
 export const Login = () => {
+
     // usando use state
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
 
-    const handleEntrar = () => {
+    // usando use callback
+    const handleEntrar = useCallback(() => {
         console.log(email);
         console.log(password);
-    };
+
+    }, [email, password]);
 
     // usando use effect
     useEffect(() => {
@@ -28,11 +31,13 @@ export const Login = () => {
         console.log(password);
     }, [password]);
 
-    // usando use memo
+    // usando use memo - memoriza o valor calculado
     const emailLength = useMemo(() => {
         console.log("Calculando tamanho do email...");
         return email.length * 1000;
     }, [email.length]);
+
+
     
     return(
         <div>
