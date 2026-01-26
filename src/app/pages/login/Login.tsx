@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 // Componente de Login 
 export const Login = () => {
+    
     // usando use state
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
@@ -42,12 +43,18 @@ export const Login = () => {
 
                 <label>
                     <span>Email</span>
-                    <input value={email} onChange={evento => setEmail(evento.target.value)} />
+                    <input 
+                        value={email} 
+                        onChange={evento => setEmail(evento.target.value)}
+                        />
                 </label>
 
                 <label>
                     <span>Senha</span>
-                    <input value={password} onChange={evento => setPassword(evento.target.value)} />
+                    <input 
+                        value={password} 
+                        onChange={evento => setPassword(evento.target.value)} 
+                        />
                 </label>
 
                 <button type="button" onClick={handleEntrar}>
