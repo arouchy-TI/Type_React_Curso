@@ -1,7 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 // Componente de Login 
 export const Login = () => {
+
+    // usando use Ref
+    const inputPasswordRef = useRef<HTMLInputElement>(null);
+
     // usando use state
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
@@ -9,6 +13,11 @@ export const Login = () => {
     const handleEntrar = () => {
         console.log(email);
         console.log(password);
+
+        if(inputPasswordRef.current !== null){
+            inputPasswordRef.current.focus();
+        }
+
     };
 
     // usando use effect
@@ -42,12 +51,21 @@ export const Login = () => {
 
                 <label>
                     <span>Email</span>
-                    <input value={email} onChange={evento => setEmail(evento.target.value)} />
+                    <input value={email} 
+                            onChange={evento => setEmail(evento.target.value)} 
+                        />
+
                 </label>
 
                 <label>
                     <span>Senha</span>
-                    <input value={password} onChange={evento => setPassword(evento.target.value)} />
+                    <input 
+                            type="password"
+                            value={password} 
+                            ref={inputPasswordRef}
+                            onChange={evento => setPassword(evento.target.value)} 
+                        />
+
                 </label>
 
                 <button type="button" onClick={handleEntrar}>
