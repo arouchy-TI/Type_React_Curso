@@ -1,0 +1,17 @@
+FLUXO INICIAL DO PROJETO.
+
+arquivo main.tsx -
+arquivo app.tsx -
+pasta routes, arquivo index.tsx - 
+arquivo Dashboard.tsx -
+        React router dom 
+        Componente de Dashboard simples
+
+arquivo Login.tsx -
+        useState -
+        useEffect -
+        useMemo -
+        Retorna Formulario, usando useState, useEffect, useMemo, e botao simples
+
+
+    

@@ -1,4 +1,4 @@
-import { use, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 // Componente de Login 
 export const Login = () => {
@@ -28,6 +28,7 @@ export const Login = () => {
         console.log(password);
     }, [password]);
 
+    // usando use memo
     const emailLength = useMemo(() => {
         console.log("Calculando tamanho do email...");
         return email.length * 1000;

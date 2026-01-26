@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-
 import { Dashboard, Login,  } from "../pages";
 
+// COMPONENTE DE ROTAS DA APLICACAO
 export const AppRoutes = () =>{
     return(
         <BrowserRouter>
