@@ -2,13 +2,16 @@
 // RENDERIZA AS ROTAS DA APLICACAO
 // IMPORTANDO ROTAS DA PASTA ROUTES
 import { AppRoutes } from "./routes";
+import { UsuarioLogadoProvider } from "./shared/context";
 
 export function App() {
   
   return (
     
-    <AppRoutes/>
+    <UsuarioLogadoProvider>
+      <AppRoutes/>
+    </UsuarioLogadoProvider>
 
-  )
-}
+  );
+};
 
