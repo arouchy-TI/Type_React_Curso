@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 // armazenar dentro use Ref, qualquer tipo de valor
+// componente dashboard
 export const Dashboard = () => {
     const counterRef = useRef({ counter : 0 });
 

@@ -1,8 +1,5 @@
-import React, { useRef, useState } from "react";
-
 // Interface vai especificar quais Atributos ou propriedades Componente espera receber - vao fazer parte do componente
 interface IInputLoginProps{
-
     label: string;
     value: string;
     type?: string;
@@ -31,18 +28,6 @@ export const InputLogin: React.FC<IInputLoginProps> = (props) => {
                 />
 
             </label>
-
-            {/* <label>
-
-                <span>Senha</span>
-                <input
-                    type="password"
-                    value={senha}
-                    ref={inputSenhaRef}
-                    onChange={evento => setSenha(evento.target.value)}
-                />
-
-            </label> */}
 
         </div>
     );
