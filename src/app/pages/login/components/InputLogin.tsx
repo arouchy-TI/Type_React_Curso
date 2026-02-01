@@ -1,3 +1,5 @@
+import React from "react";
+
 // Interface vai especificar quais Atributos ou propriedades Componente espera receber - vao fazer parte do componente
 interface IInputLoginProps{
     label: string;
@@ -8,7 +10,7 @@ interface IInputLoginProps{
     onPressEnter?: () => void;
 };
 
-export const InputLogin: React.FC<IInputLoginProps> = (props) => {
+export const InputLogin = React.forwardRef<HTMLInputElement, IInputLoginProps>((props, ref) => {
 
     return(
 
@@ -18,6 +20,7 @@ export const InputLogin: React.FC<IInputLoginProps> = (props) => {
 
                 <span>{props.label}</span>
                 <input 
+                    ref={ref}
                     value={props.value}
                     type={props.type}
                     onChange={evento => props.onChange(evento.target.value)}
@@ -31,4 +34,4 @@ export const InputLogin: React.FC<IInputLoginProps> = (props) => {
 
         </div>
     );
-};
+});
