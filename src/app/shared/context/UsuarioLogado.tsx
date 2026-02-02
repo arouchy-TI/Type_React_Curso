@@ -4,6 +4,7 @@ interface IUsuarioLogadoContextData {
     nomeUsuario: string;
 };
 
+// criando canal de transmissao - subcomponenetes (provider, consumer)
 const UsuarioLogadoContext = createContext<IUsuarioLogadoContextData>({} as IUsuarioLogadoContextData);
 
 interface IUsuarioLogadoProviderProps {
@@ -12,7 +13,7 @@ interface IUsuarioLogadoProviderProps {
 
 export const UsuarioLogadoProvider: React.FC<IUsuarioLogadoProviderProps> = ( {children} ) => {
     return(
-        <UsuarioLogadoContext.Provider value={{nomeUsuario: ""}}>
+        <UsuarioLogadoContext.Provider value={{nomeUsuario: "Felipe"}}>
             {children}
         </UsuarioLogadoContext.Provider>
     );

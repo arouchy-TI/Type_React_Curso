@@ -7,7 +7,7 @@ import { UsuarioLogadoProvider } from "./shared/context";
 export function App() {
   
   return (
-    
+    // Aplicando Context from "./shared/context" - UsuarioLogadoProvider no app.tsx
     <UsuarioLogadoProvider>
       <AppRoutes/>
     </UsuarioLogadoProvider>
