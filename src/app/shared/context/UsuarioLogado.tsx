@@ -7,13 +7,13 @@ interface IUsuarioLogadoContextData {
 
 // criando canal de transmissao - subcomponenetes (provider, consumer) - parametros de tipagem
 // objeto vazio {} - representacao IUsuarioLogadoContextData
-const UsuarioLogadoContext = createContext<IUsuarioLogadoContextData>({} as IUsuarioLogadoContextData);
+export const UsuarioLogadoContext = createContext<IUsuarioLogadoContextData>({} as IUsuarioLogadoContextData);
 
 interface IUsuarioLogadoProviderProps {
     children: React.ReactNode
 }
 
-// contante do tipo, componente react funcional
+// passando dado: nomeUsuario, para os filhos do provider 
 export const UsuarioLogadoProvider: React.FC<IUsuarioLogadoProviderProps> = ( {children} ) => {
     return(
         <UsuarioLogadoContext.Provider value={{nomeUsuario: "Felipe"}}>

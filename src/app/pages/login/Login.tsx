@@ -1,10 +1,14 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { InputLogin } from "./components/InputLogin";
 import { ButtonLoggin } from "./components/ButtonLogin";
+import { UsuarioLogadoContext } from "../../shared/context";
 
 
 // Componente de Login 
 export const Login = () => {
+
+    // usando use Context - varias partes da aplicacao
+    const {nomeUsuario} = useContext(UsuarioLogadoContext);
 
     // usando use Ref
     const inputPasswordRef = useRef<HTMLInputElement>(null);
@@ -51,6 +55,7 @@ export const Login = () => {
             <form >
 
                 <p>Quantidade de caracteres no email: {emailLength}</p>
+                <p>Usuario Logado: {nomeUsuario}</p>
 
                 {/* importando componente de InputLogin da pasta login/components */}
                 <InputLogin
