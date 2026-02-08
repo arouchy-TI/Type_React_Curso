@@ -1,8 +1,9 @@
 import React, { createContext } from "react";
 
-// dados compartilhados no contexto
+// dados compartilhados no contexto - propiedades que vao poder ser disponibilizadas no contexto
 interface IUsuarioLogadoContextData {
     nomeUsuario: string;
+    logout: () => void;
 };
 
 // criando canal de transmissao - subcomponenetes (provider, consumer) - parametros de tipagem
