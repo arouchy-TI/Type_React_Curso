@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { InputLogin } from "./components/InputLogin";
 import { ButtonLoggin } from "./components/ButtonLogin";
+import { UsuarioLogadoContext } from "../../shared/context";
 
 
 // Componente de Login 
@@ -8,6 +9,9 @@ export const Login = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+    // usando use Context - varias partes da aplicacao
+    const {nomeUsuario} = useContext(UsuarioLogadoContext);
 
     // usando use Ref
     const inputPasswordRef = useRef<HTMLInputElement>(null);
@@ -58,6 +62,7 @@ export const Login = () => {
             <form >
 
                 <p>Quantidade de caracteres no email: {emailLength}</p>
+                <p>Usuario Logado: {nomeUsuario}</p>
 
 <<<<<<< HEAD
                 <label>
@@ -87,7 +92,7 @@ export const Login = () => {
                     onChange={newValue => setEmail(newValue)}
                     onPressEnter={() => inputPasswordRef.current?.focus()}
                 />
-
+/
                 <InputLogin
                     type="password"
                     label="Senha"
