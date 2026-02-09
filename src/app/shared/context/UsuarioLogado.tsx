@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useCallback } from "react";
 
 // dados compartilhados no contexto - propiedades que vao poder ser disponibilizadas no contexto
 interface IUsuarioLogadoContextData {
@@ -16,8 +16,13 @@ interface IUsuarioLogadoProviderProps {
 
 // passando dado: nomeUsuario, para os filhos do provider 
 export const UsuarioLogadoProvider: React.FC<IUsuarioLogadoProviderProps> = ( {children} ) => {
+
+    const handlerLogout = useCallback(() => {
+        console.log('Testando botao');
+    }, []);
+
     return(
-        <UsuarioLogadoContext.Provider value={{nomeUsuario: "Felipe"}}>
+        <UsuarioLogadoContext.Provider value={{ nomeUsuario: "Felipe", logout: handlerLogout }}>
             {children}
         </UsuarioLogadoContext.Provider>
     );

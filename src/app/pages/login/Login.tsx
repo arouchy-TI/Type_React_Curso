@@ -8,7 +8,7 @@ import { useUsuarioLogado } from "../../shared/hooks";
 export const Login = () => {
 
     // usando use Context - varias partes da aplicacao
-    const {nomeUsuario} = useUsuarioLogado();
+    const {nomeUsuario, logout} = useUsuarioLogado();
 
     // usando use Ref
     const inputPasswordRef = useRef<HTMLInputElement>(null);
@@ -79,6 +79,10 @@ export const Login = () => {
 
                 <ButtonLoggin type="button" onClick={handleEntrar}>
                     Cadastrar-se
+                </ButtonLoggin>
+
+                <ButtonLoggin type="button" onClick={logout}>
+                    Sair
                 </ButtonLoggin>
 
             </form>
