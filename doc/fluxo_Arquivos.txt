@@ -12,6 +12,15 @@ arquivo Login.tsx -
         useEffect -
         useMemo -
         Retorna Formulario, usando useState, useEffect, useMemo, e botao simples
+        
+        use Call Back -
+        use Ref - 
+        chamar componente customizado
+
+arquivo inputLogin.tsx - 
+        componente customizado -
+        forward Ref -
+
 
 
     

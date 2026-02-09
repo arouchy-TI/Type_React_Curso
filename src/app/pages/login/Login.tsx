@@ -5,12 +5,16 @@ import { InputLogin } from "./components/InputLogin";
 // Componente de Login 
 export const Login = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     // usando use Ref
     const inputPasswordRef = useRef<HTMLInputElement>(null);
 >>>>>>> feature/LoginComponents
     
+=======
+
+>>>>>>> feature/atualizando_documentacao
     // usando use state
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
@@ -59,7 +63,11 @@ export const Login = () => {
                     <span>Email</span>
                     <input 
                         value={email} 
+<<<<<<< HEAD
                         onChange={evento => setEmail(evento.target.value)}
+=======
+                        onChange={evento => setEmail(evento.target.value)} 
+>>>>>>> feature/atualizando_documentacao
                         />
                 </label>
 
